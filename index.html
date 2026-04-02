@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBAL ART FEST | Всеукраїнський фестиваль-конкурс мистецтв</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">GLOBAL ART FEST</a>
+            <ul class="nav-links">
+                <li><a href="#steps">Як взяти участь</a></li>
+                <li><a href="#nominations">Номінації</a></li>
+                <li><a href="#prices">Внески</a></li>
+                <li><a href="#faq">Правила</a></li>
+                <li><a href="#register">Реєстрація</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>GLOBAL ART FEST</h1>
+        <p>Всеукраїнський фестиваль-конкурс мистецтв. Вокал та Хореографія.</p>
+        <a href="#register" class="btn">Подати заявку</a>
+    </section>
+
+    <section class="section" id="steps">
+        <h2 class="section-title">Як стати учасником?</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <h3>Ознайомитись</h3>
+                <p style="color: var(--text-muted)">Уважно прочитайте положення та організаційні питання.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <h3>Заповнити анкету</h3>
+                <p style="color: var(--text-muted)">Подайте заявку на участь із зазначенням категорії та номінації.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <h3>Підтвердження</h3>
+                <p style="color: var(--text-muted)">Отримайте офіційне підтвердження реєстрації від оргкомітету.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <h3>Оплата та зв'язок</h3>
+                <p style="color: var(--text-muted)">Здійсніть оплату та приєднайтесь до нашого Telegram-каналу.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="nominations">
+        <h2 class="section-title">Напрями та Номінації</h2>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('choreo')">Хореографія</button>
+            <button class="tab-btn" onclick="openTab('vocal')">Вокал</button>
+        </div>
+
+        <div id="choreo" class="tab-content active">
+            <div class="nomination-card">
+                <h3>Сучасна хореографія</h3>
+                <p>Contemporary, модерн, jazz-modern, experimental. Передача емоцій та ідей через сучасну лексику.</p>
+            </div>
+            <div class="nomination-card">
+                <h3>Естрадна / Show dance</h3>
+                <p>Сценічні номери розважального характеру з акторською майстерністю та шоу-елементами.</p>
+            </div>
+            <div class="nomination-card">
+                <h3>Класична хореографія</h3>
+                <p>Балет, неокласика. Академічна школа танцю, витончена пластика та чистота виконання.</p>
+            </div>
+            <div class="nomination-card">
+                <h3>Народна хореографія</h3>
+                <p>Народний та стилізований танець різних країн світу, збереження традицій та фольклору.</p>
+            </div>
+            <div class="nomination-card">
+                <h3>Бальна хореографія</h3>
+                <p>Європейська та латиноамериканська програми (вальс, танго, самба, джайв тощо).</p>
+            </div>
+            <div class="nomination-card">
+                <h3>Акробатична хореографія</h3>
+                <p>Постановки з використанням акробатичних елементів, трюків та гімнастичної техніки.</p>
+            </div>
+        </div>
+
+        <div id="vocal" class="tab-content">
+            <div class="nomination-card">
+                <h3>Естрадний вокал</h3>
+                <p>Сучасний популярний стиль: естрадні пісні, шоу-програми, мюзикл. Оцінюється виразність та харизма.</p>
+            </div>
+            <div class="nomination-card">
+                <h3>Академічний вокал</h3>
+                <p>Класичний спів, оперні та камерні твори. Оцінюється техніка дихання та контроль голосу.</p>
+            </div>
+            <div class="nomination-card">
+                <h3>Народний вокал</h3>
+                <p>Виконання народних пісень з урахуванням традицій. Важлива автентичність та темброве забарвлення.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="prices">
+        <h2 class="section-title">Реєстраційні внески</h2>
+        <div class="prices-grid">
+            <div class="price-card">
+                <h3>Соло</h3>
+                <div class="price-amount">900 ₴</div>
+                <div class="price-desc">за один виступ</div>
+            </div>
+            <div class="price-card">
+                <h3>Дует</h3>
+                <div class="price-amount">750 ₴</div>
+                <div class="price-desc">з кожного учасника</div>
+            </div>
+            <div class="price-card">
+                <h3>Тріо / Квартет</h3>
+                <div class="price-amount">600 ₴</div>
+                <div class="price-desc">з кожного учасника</div>
+            </div>
+            <div class="price-card">
+                <h3>Мала форма</h3>
+                <div class="price-amount">500 ₴</div>
+                <div class="price-desc">5-9 чоловік (з учасника)</div>
+            </div>
+            <div class="price-card">
+                <h3>Середня форма</h3>
+                <div class="price-amount">400 ₴</div>
+                <div class="price-desc">10-17 чоловік (з учасника)</div>
+            </div>
+            <div class="price-card">
+                <h3>Велика форма</h3>
+                <div class="price-amount">350 ₴</div>
+                <div class="price-desc">від 18 чоловік (з учасника)</div>
+            </div>
+        </div>
+        <div class="discount-banner">
+            <h3 style="color: var(--primary); margin-top: 0;">🔥 Система знижок</h3>
+            <p style="margin-bottom: 0;">Друга участь сольного або колективного виступу – <strong>знижка 20%</strong>. У разі поєднання соло + колектив — 20% знижки на колективний номер. Знижки не сумуються.</p>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <h2 class="section-title">Організаційні питання</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Які вікові категорії передбачені? <span>▼</span></div>
+            <div class="faq-answer">
+                <p>Категорії: 4-6 років, 7-10 років, 11-14 років, 15-18 років, 19-25 років, 26+ років. Також є окремі категорії "Викладачі" та "Змішані колективи".</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Як відбувається оцінювання та нагородження? <span>▼</span></div>
+            <div class="faq-answer">
+                <p>Кожен член журі оцінює виступ за 30-бальною системою. Вища нагорода — Гран-прі конкурсу. Переможці отримують дипломи I, II, III ступенів та медалі/кубки.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Правила безпеки під час повітряної тривоги? <span>▼</span></div>
+            <div class="faq-answer">
+                <p>Безпека — пріоритет. Під час повітряної тривоги всі учасники та гості фестивалю повинні негайно пройти до найближчого укриття. Захід призупиняється до відбою.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Чи повертається внесок у разі відмови? <span>▼</span></div>
+            <div class="faq-answer">
+                <p>Відмова від участі менш ніж за 7 днів до початку фестивалю не передбачає повернення організаційного внеску. Відшкодування окремим учасникам груп не здійснюється.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid #333;">
+        <p style="color: var(--primary); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 10px;">GLOBAL ART FEST</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">© 2026 Всі права захищено. Учасники погоджуються на фото- та відеозйомку під час заходу.</p>
+    </footer>
+
+    <script>
+        // Меню
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Таби (Вокал / Хореографія)
+        function openTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // FAQ Акордеон
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-answer').style.maxHeight = null;
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                    const answer = item.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
