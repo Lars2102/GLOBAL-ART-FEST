@@ -18,13 +18,21 @@
                 <img src="img/logo.png" alt="GLOBAL ART FEST" class="logo-img">
                 <span class="logo-text">GLOBAL <span style="color: #fff;">ART</span> FEST</span>
             </a>
-            <ul class="nav-links">
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#steps">Участь</a></li>
                 <li><a href="#nominations">Номінації</a></li>
                 <li><a href="#info">Категорії</a></li>
                 <li><a href="#prices">Внески</a></li>
                 <li><a href="#gallery">Галерея</a></li>
                 <li><a href="#faq">Правила</a></li>
+                <li><a href="#contacts">Контакти</a></li>
             </ul>
         </div>
     </header>
@@ -261,6 +269,73 @@
         </div>
     </section>
 
+    <section class="section" id="contacts">
+        <h2 class="section-title hidden-anim">Контакти та <span class="gradient-text">Локація</span></h2>
+        
+        <div class="contacts-wrapper">
+            <div class="contacts-grid">
+                <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" rel="noopener noreferrer" class="contact-card glow-blue hidden-anim delay-1">
+                    <div class="contact-icon">📍</div>
+                    <h3>Локація</h3>
+                    <p>м. Житомир,<br>вул. Театральна 7</p>
+                </a>
+                
+                <a href="tel:+380998289934" class="contact-card glow-pink hidden-anim delay-2">
+                    <div class="contact-icon">📞</div>
+                    <h3>Телефон</h3>
+                    <p>+38 (099) 828 99 34</p>
+                </a>
+                
+                <a href="mailto:globalartfest12@gmail.com" class="contact-card glow-purple hidden-anim delay-3">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>globalartfest12@gmail.com</p>
+                </a>
+
+                <a href="https://instagram.com/globalartfest1" target="_blank" rel="noopener noreferrer" class="contact-card glow-orange hidden-anim delay-4">
+                    <div class="contact-icon">📸</div>
+                    <h3>Instagram</h3>
+                    <p>@globalartfest1</p>
+                </a>
+                
+                <a href="https://t.me/+inKXOKIUGAs4MWFi" target="_blank" rel="noopener noreferrer" class="contact-card glow-green hidden-anim delay-5" style="grid-column: 1 / -1;">
+                    <div class="contact-icon">💬</div>
+                    <h3>Telegram Канал</h3>
+                    <p>Приєднатися до спільноти учасників</p>
+                </a>
+            </div>
+
+            <div class="map-container hidden-anim delay-6">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2554.492582845233!2d28.6601449!3d50.2581699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bdfb5db905%3A0xc3cf93f9c6d48240!2z0LLRg9C70LjRhtGPINCi0LXQsNGC0YDQsNC70YzQvdCwLCA3LCDQltC40YLQvtC80LjRgCwg0JbQuNGC0L7QvNC40YDRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTAwMDE!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-btn-container" id="floating-btn-container">
+        <div class="floating-menu">
+            <a href="https://t.me/+inKXOKIUGAs4MWFi" target="_blank" rel="noopener noreferrer" class="float-item glow-green" title="Telegram Канал">
+                💬
+            </a>
+            <a href="https://instagram.com/globalartfest1" target="_blank" rel="noopener noreferrer" class="float-item glow-orange" title="Instagram">
+                📸
+            </a>
+            <a href="tel:+380998289934" class="float-item glow-pink" title="Зателефонувати">
+                📞
+            </a>
+        </div>
+        <button class="main-float-btn" id="main-float-btn">
+            <span class="btn-icon">✚</span>
+        </button>
+    </div>
+
     <footer>
         <p class="logo-text" style="font-size: 1.5rem;">GLOBAL <span class="gradient-text">ART</span> FEST</p>
         <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">Ваше мистецтво. Ваша історія. Ваш момент.</p>
@@ -317,6 +392,39 @@
 
         document.querySelectorAll('.hidden-anim').forEach((el) => {
             observer.observe(el);
+        });
+
+        // --- Мобільне меню (Гамбургер) ---
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // --- Плаваюча кнопка зв'язку ---
+        const floatContainer = document.getElementById('floating-btn-container');
+        const mainFloatBtn = document.getElementById('main-float-btn');
+
+        // Відкриття/закриття при кліку
+        mainFloatBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            floatContainer.classList.toggle('active');
+        });
+
+        // Закриття меню при кліку будь-де на сторінці
+        document.addEventListener('click', (e) => {
+            if (!floatContainer.contains(e.target)) {
+                floatContainer.classList.remove('active');
+            }
         });
     </script>
 </body>
