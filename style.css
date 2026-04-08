@@ -110,7 +110,7 @@ header.scrolled {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: color 0.25s ease;
+    transition: color 0.15s ease;
 }
 
 .nav-links a:hover {
@@ -197,7 +197,7 @@ header.scrolled {
     border-radius: 30px;
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
     box-shadow: 0 10px 30px rgba(176, 38, 255, 0.4);
 }
 
@@ -224,8 +224,8 @@ header.scrolled {
 /* Кроки участі */
 .steps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Змінили 180px на 150px */
-    gap: 15px; /* Трохи зменшили простір між ними, щоб точно все влізло */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
 }
 
 .step-item {
@@ -234,7 +234,7 @@ header.scrolled {
     padding: 30px 20px;
     border-radius: 15px;
     text-align: center;
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
 }
 
 .step-item:hover {
@@ -285,7 +285,7 @@ header.scrolled {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 30px;
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
 }
 
 .tab-btn.active, .tab-btn:hover {
@@ -309,7 +309,7 @@ header.scrolled {
     padding: 35px 30px;
     border-radius: 15px;
     border: 1px solid var(--border-color);
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
 }
 
 .nomination-card:hover {
@@ -345,7 +345,7 @@ header.scrolled {
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
 }
 
 .info-card::before {
@@ -393,7 +393,7 @@ header.scrolled {
     padding: 40px 20px;
     text-align: center;
     border-radius: 20px;
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
 }
 
 .price-card:hover {
@@ -438,7 +438,7 @@ header.scrolled {
     overflow: hidden;
     border: 1px solid var(--border-color);
     aspect-ratio: 4 / 3; 
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
 }
 
 .gallery-item img {
@@ -464,7 +464,7 @@ header.scrolled {
     margin-bottom: 15px;
     border-radius: 10px;
     overflow: hidden;
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
 }
 
 .faq-item:hover {
@@ -516,7 +516,7 @@ header.scrolled {
     text-align: center;
     text-decoration: none;
     color: var(--text-light);
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -554,11 +554,22 @@ header.scrolled {
 
 .map-container {
     flex: 1;
-    border-radius: 15px;
+    width: 100%;
+    border-radius: 20px;
+    min-height: 200px;
     overflow: hidden;
     border: 1px solid var(--border-color);
-    min-height: 400px;
-    transition: all 0.25s ease;
+    position: relative;
+    transition: all 0.15s ease;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
 }
 
 .map-container:hover {
@@ -607,7 +618,7 @@ header.scrolled {
     align-items: center;
     font-size: 1.5rem;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
@@ -628,7 +639,7 @@ header.scrolled {
     justify-content: center;
     align-items: center;
     box-shadow: 0 5px 20px rgba(176, 38, 255, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .main-float-btn:hover {
@@ -688,7 +699,6 @@ footer {
     .section-title { font-size: 1.8rem; }
     .logo-text { font-size: 1.2rem; }
     
-    /* Дозволяємо тексту переноситись, щоб не ламав сітку */
     .nomination-card h3,
     .nomination-card p,
     .contact-card p,
@@ -698,7 +708,6 @@ footer {
         hyphens: auto;
     }
     
-    /* Показуємо гамбургер, робимо меню випадаючим */
     .hamburger {
         display: flex;
     }
@@ -723,7 +732,6 @@ footer {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
-    /* Анімація гамбургера в хрестик */
     .hamburger.active span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
         background: #00d4ff;
@@ -736,7 +744,6 @@ footer {
         background: #ff3366;
     }
 
-    /* --- РОБИМО ПО ДВА ЕЛЕМЕНТИ В РЯД --- */
     .steps-grid,
     .tab-content.active,
     .prices-grid,
@@ -746,7 +753,6 @@ footer {
         gap: 15px;
     }
 
-    /* --- Категорії та Умови: ПО ОДНОМУ В РЯД --- */
     .info-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -760,15 +766,13 @@ footer {
     
     .contacts-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px; /* Трохи менший відступ між картками */
+        gap: 10px;
     }
     
-    /* Дозволяємо Telegram-картці розтягнутися на обидві колонки */
     .contact-card[style*="grid-column"] {
         grid-column: 1 / -1 !important;
     }
 
-    /* Зменшуємо іконки та текст, щоб вони гарно помістилися у вузькі картки */
     .contact-card { 
         padding: 15px 5px; 
     }
@@ -786,20 +790,7 @@ footer {
     }
     
     .map-container {
-    width: 100%;
-    height: 300px;
-    border-radius: 20px; /* Згідно з вашим дизайном */
-    overflow: hidden;    /* Щоб карта не виходила за закруглені кути */
-    position: relative;
-    }
-
-    .map-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-        border: 0;
+        height: 300px;
     }
 
     /* Плаваюча кнопка для мобільних */
@@ -818,7 +809,6 @@ footer {
         font-size: 1.2rem;
     }
 
-    /* Зменшуємо шрифти та відступи під 2 колонки */
     .step-item { padding: 20px 10px; }
     .step-num { width: 40px; height: 40px; line-height: 40px; font-size: 1rem; margin-bottom: 10px; }
     .step-item p { font-size: 0.8rem; }
@@ -827,7 +817,6 @@ footer {
     .nomination-card h3 { font-size: 1rem; margin-bottom: 10px; line-height: 1.3; }
     .nomination-card p { font-size: 0.75rem; }
 
-    /* Комфортні розміри для карток Категорій (на всю ширину) */
     .info-card { padding: 30px 20px; }
     .info-card h3 { font-size: 1.3rem; margin-bottom: 15px; }
     .info-list li { font-size: 0.95rem; }
